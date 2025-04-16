@@ -35,7 +35,7 @@
           <div class="col-md-8 col-xs-12">
             <ul class="left-info">
               <li><a href="#"><i class="fa fa-clock-o"></i>Mon-Fri 08:00-19:00</a></li>
-              <li><a href="#"><i class="fa fa-phone"></i>+256 782 012945 / +256 702 012945</a></li>
+              <li><a href="#"><i class="fa fa-phone"></i>+256 782 012945 / +256 701 012945</a></li>
             </ul>
           </div>
           <div class="col-md-4">
@@ -102,7 +102,7 @@
             <ul>
               <li><a href='#tabs-1'>Spiritual Growth<i class="fa fa-angle-right"></i></a></li>
               <li><a href='#tabs-2'>Vocational Skills <i class="fa fa-angle-right"></i></a></li>
-              <li><a href='#tabs-3'>Saving Group <i class="fa fa-angle-right"></i></a></li>
+              <li><a href='#tabs-3'>Youth Training Workshop <i class="fa fa-angle-right"></i></a></li>
               <li><a href='#tabs-4'>Scholarship Program <i class="fa fa-angle-right"></i></a></li>
             </ul>
           </div>
@@ -112,25 +112,25 @@
                 <img class="ni-img" src="assets/images/nn13.jpg" alt="">
                 <h4>Spiritual Growth</h4>
                 <p>Through Jinja Salvation Church to nature spiritual well-being and community growth.Through Jinja Salvation Church to nature spiritual well-being and community growth.
-                <br><br>Through Jinja Salvation Church to nature spiritual well-being and community growth.</p>
+                <br><br>Child spiritual growth is a journey of developing a relationship with the divine and understanding spiritual concepts in a way that is relevant to their age and experiences. It involves nurturing their innate sense of wonder, teaching them about faith, values, and ethics, and providing opportunities for them to connect with something larger than themselves. This can be fostered through storytelling, prayer, rituals, nature exploration, and acts of kindness, helping them build a foundation for a meaningful and compassionate life. </p>
               </article>
               <article id='tabs-2'>
-                <img class="ni-img" src="assets/images/nn10.jpg" alt="">
+                <img class="ni-img" src="assets/images/n11.jpg" alt="">
                 <h4>Vocational Skills</h4>
                 <p>Children and Youth Engage in skill development. Children and Youth Engage in skill development.
-                <br><br>Children and Youth Engage in skill development.</p>
+                <br><br>Youth vocational skills training equips young individuals with practical skills and knowledge necessary for specific trades or occupations. This type of training focuses on hands-on learning and prepares youth for direct entry into the workforce, self-employment, or further technical education. It plays a crucial role in addressing youth unemployment, fostering economic independence, and meeting the demands of various industries. Examples of vocational skills training include carpentry, tailoring, automotive repair, information technology, hospitality, and agriculture. </p>
               </article>
               <article id='tabs-3'>
-                <img class="ni-img" src="assets/images/nn7.jpg" alt="">
-                <h4>Saving Group </h4>
-                <p>Encourages economic development and Financial stability. Encourages economic development and Financial stability
-                <br><br>Encourages economic development and Financial stability. Encourages economic development and Financial stability</p>
+                <img class="ni-img" src="assets/images/n2.jpg" alt="">
+                <h4>Youth Training Workshop </h4>
+                <p>Equips youth entrepreneurship skills and knowledge to boost their confidence.
+                <br><br>Youth training workshops are focused, short-term programs designed to equip young people with specific skills, knowledge, or attitudes relevant to personal and professional development. These interactive sessions often cover topics like leadership, communication, entrepreneurship, digital literacy, problem-solving, and career readiness. By providing practical tools and fostering active participation, workshops empower youth to enhance their capabilities, boost their confidence, and navigate future challenges effectively. </p>
               </article>
               <article id='tabs-4'>
                 <img class="ni-img" src="assets/images/nn1.jpg" alt="">
                 <h4>Scholarship Program </h4>
                 <p>Enables children and youth attain academic advancement in the communicty. Enables children and youth attain academic advancement in the communicty
-                <br><br>Enables children and youth attain academic advancement in the communicty. Enables children and youth attain academic advancement in the communicty</p>
+                <br><br> Scholarship programs for youth and children provide financial assistance to enable access to education and skills development opportunities. These programs aim to alleviate financial barriers, allowing young individuals to pursue their academic or vocational aspirations. Scholarships can cover tuition fees, learning materials, accommodation, and other related expenses, fostering educational equity and empowering the next generation. They often target talented students from underprivileged backgrounds, specific fields of study, or those demonstrating leadership potential or community involvement.</p>
               </article>
             </section>
           </div>
@@ -305,16 +305,53 @@
     <script src="assets/js/slick.js"></script>
     <script src="assets/js/accordions.js"></script>
 
-    <script language = "text/Javascript"> 
-      cleared[0] = cleared[1] = cleared[2] = 0;  
-      function clearField(t){                    
-      if(! cleared[t.id]){                      
-          cleared[t.id] = 1;  
-          t.value='';         
-          t.style.color='#fff';
-          }
-      }
-    </script>
+    <script>
+      /* <script language = "text/Javascript"> 
+         cleared[0] = cleared[1] = cleared[2] = 0;  
+         function clearField(t){                   
+         if(! cleared[t.id]){                       
+             cleared[t.id] = 1;   
+             t.value='';          
+             t.style.color='#fff';
+             }
+         }
+   
+   
+       */
+      
+   
+               
+     // Wait for the HTML document to be fully loaded before running the script
+     document.addEventListener('DOMContentLoaded', function() {
+   
+   // Get the button element by its ID
+   const readMoreBtn = document.getElementById('read-more-btn');
+   // Get the content element that needs to be shown/hidden
+   const moreContent = document.getElementById('more-content');
+   
+   // Check if both elements were found to avoid errors
+   if (readMoreBtn && moreContent) {
+     // Add an event listener to the button for the 'click' event
+     readMoreBtn.addEventListener('click', function() {
+       // Check if the content is currently hidden (display is 'none')
+       if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+         // If hidden, show the content
+         moreContent.style.display = 'block'; // Or 'inline', 'flex', etc., depending on your layout needs
+         // Change the button text to "Read Less"
+         readMoreBtn.textContent = 'Read Less';
+       } else {
+         // If visible, hide the content
+         moreContent.style.display = 'none';
+         // Change the button text back to "Read More"
+         readMoreBtn.textContent = 'Read More';
+       }
+     });
+   } else {
+     console.warn("Read more button or content not found. Check IDs 'read-more-btn' and 'more-content'.");
+   }
+   
+   });
+       </script>
 
   </body>
 </html>

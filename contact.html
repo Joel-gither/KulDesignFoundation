@@ -37,7 +37,7 @@
           <div class="col-md-8 col-xs-12">
             <ul class="left-info">
               <li><a href="#"><i class="fa fa-clock-o"></i>Mon-Fri 08:00-19:00</a></li>
-              <li><a href="#"><i class="fa fa-phone"></i>+256 782 012945 / +256 702 012945</a></li>
+              <li><a href="#"><i class="fa fa-phone"></i>+256 782 012945 / +256 701 012945</a></li>
             </ul>
           </div>
           <div class="col-md-4">
@@ -104,7 +104,7 @@
               <i class="fa fa-phone"></i>
               <h4>Phone</h4>
               <p>Available 24/7 for calling and receiving calls.</p>
-              <a href="#">+256 782 012945 / +256 702 012945</a>
+              <a href="#">+256 782 012945 / +256 701 012945</a>
             </div>
           </div>
           <div class="col-md-4">
@@ -281,8 +281,8 @@
     <script src="assets/js/owl.js"></script>
     <script src="assets/js/slick.js"></script>
     <script src="assets/js/accordions.js"></script>
-
-    <script language = "text/Javascript"> 
+    <script>
+   /* <script language = "text/Javascript"> 
       cleared[0] = cleared[1] = cleared[2] = 0;  
       function clearField(t){                   
       if(! cleared[t.id]){                       
@@ -291,6 +291,42 @@
           t.style.color='#fff';
           }
       }
+
+
+    */
+   
+
+            
+  // Wait for the HTML document to be fully loaded before running the script
+  document.addEventListener('DOMContentLoaded', function() {
+
+// Get the button element by its ID
+const readMoreBtn = document.getElementById('read-more-btn');
+// Get the content element that needs to be shown/hidden
+const moreContent = document.getElementById('more-content');
+
+// Check if both elements were found to avoid errors
+if (readMoreBtn && moreContent) {
+  // Add an event listener to the button for the 'click' event
+  readMoreBtn.addEventListener('click', function() {
+    // Check if the content is currently hidden (display is 'none')
+    if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+      // If hidden, show the content
+      moreContent.style.display = 'block'; // Or 'inline', 'flex', etc., depending on your layout needs
+      // Change the button text to "Read Less"
+      readMoreBtn.textContent = 'Read Less';
+    } else {
+      // If visible, hide the content
+      moreContent.style.display = 'none';
+      // Change the button text back to "Read More"
+      readMoreBtn.textContent = 'Read More';
+    }
+  });
+} else {
+  console.warn("Read more button or content not found. Check IDs 'read-more-btn' and 'more-content'.");
+}
+
+});
     </script>
 
   </body>

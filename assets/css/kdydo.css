@@ -26,7 +26,7 @@ h1,h2,h3,h4,h5,h6 {
 	margin: 0px;
 }
 
-a.filled-button {
+.filled-button {
 	background-color: #1b1477;
 	color: #fff;
 	font-size: 13px;
@@ -38,11 +38,26 @@ a.filled-button {
 	transition: all 0.3s;
 }
 
-a.filled-button:hover {
+.filled-button:hover {
 	background-color: #fff;
 	color: #655ec7;
 }
+.read-more-btn {
+	background-color: #1b1477;
+	color: #fff;
+	font-size: 13px;
+	text-transform: uppercase;
+	font-weight: 700;
+	padding: 12px 30px;
+	border-radius: 30px;
+	display: inline-block;
+	transition: all 0.3s;
+}
 
+.read-more-btn:hover {
+	background-color: #fff;
+	color: #655ec7;
+}
 a.border-button {
 	background-color: transparent;
 	color: #fff;
@@ -1303,7 +1318,28 @@ footer .contact-form button.filled-button:hover {
 }
 
 
+.vid-player-main{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+    margin: 0; /* Remove default body margin */
+    background-color: #f0f0f0; /* Optional background color */
+  }
 
+  .vid-player{
+    text-align: center;
+	display: block;
+	align-items: center;
+	justify-content: space-between;
+
+  }
+
+  video {
+    /* Optional: Add some styling to the video itself */
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+  }
 
  
 @media (max-width: 768px) {

@@ -95,7 +95,8 @@
                   <h6>we are ready to help you</h6>
                   <h4>Promote Spiritual Growth<br>&amp; Community Engagement</h4>
                   <p>Establish and support Jinja Salvation Church Kibibi to nature spiritual well-being and community growth </p>
-                  <a href="contact.html" class="filled-button">DONATE</a>
+                  <a href="javascript:void(0);" class="filled-button pesapal-donate-button">DONATE</a>
+
                 </div>
             </div>
           </div>
@@ -106,7 +107,8 @@
                   <h6>we are here to support you</h6>
                   <h4>Enhance Education<br>&amp; Child Development</h4>
                   <p>Provide quality education and vocational skills to children and youth</p>
-                  <a href="services.html" class="filled-button">DONATE</a>
+                  <a href="javascript:void(0);" class="filled-button pesapal-donate-button">DONATE</a>
+
                 </div>
             </div>
           </div>
@@ -117,7 +119,8 @@
                   <h6>we make responsible citizens</h6>
                   <h4>Foster Youth Empowerement <br>&amp; Skill Development</h4>
                   <p>Offer training programs and skill development opportunities</p>
-                  <a href="about.html" class="filled-button">DONATE</a>
+                  <a href="javascript:void(0);" class="filled-button pesapal-donate-button">DONATE</a>
+
                 </div>
             </div>
           </div>
@@ -165,7 +168,7 @@
           </div>
           <div class="col-md-4">
             <div class="service-item">
-              <img class="nn-img" src="assets/images/nn43.jpg" alt="">
+              <img class="nn-img" src="assets/images/n20.jpg" alt="">
               <div class="down-content">
                 <h4>Vocational Skills</h4>
                 <p> Children and Youth Engage in skill development.</p>
@@ -179,7 +182,7 @@
           </div>
           <div class="col-md-4">
             <div class="service-item">
-              <img class="nn-img" src="assets/images/n7.jpg" alt="">
+              <img class="nn-img" src="assets/images/n23.jpg" alt="">
               <div class="down-content">
                 <h4> Youth Training Workshop</h4>
                 <p>Equips youth entrepreneurship skills and knowledge to boost their confidence.</p>
@@ -246,7 +249,9 @@
               <div class="col-lg-5 col-12">
                   <a href="#" class="me-4">Make a donation</a>
 
-                  <a href="#" class="custom-btn btn smoothscroll">DONATE</a>
+                  <!-- Inside .cta-section -->
+            <a href="javascript:void(0);" class="custom-btn btn smoothscroll pesapal-donate-button">DONATE</a>
+
               </div>
 
           </div>
@@ -263,7 +268,9 @@
             <p>Youth are trained various skills in fashion and design. later the we boost their confidence by providing platform for them to show case their artwork and beautiful designs  at training center in Kibibi budondo.</p>
             <p>Investing in a dedicated youth skills training center is vital for community empowerment and economic growth. This center will equip young people with marketable vocational skills, bridging the gap between education and employment. By providing access to practical training in trades and technologies, we can reduce youth unemployment, foster entrepreneurship, and create a skilled workforce ready to contribute to the local economy. Supporting the construction of this center is an investment in a brighter future for our youth and a more prosperous community for all.</p>
             <hr>
-             <p><a href="" class="custom-btn"> DONATE</a> to transform the lives of these beautiful souls
+             <!-- Inside Youth Skilling Program section -->
+          <p><a href="javascript:void(0);" class="custom-btn pesapal-donate-button"> DONATE</a> to transform the lives of these beautiful souls</p>
+
 
           </div>
            
@@ -282,7 +289,11 @@
         </div>
         <div class="col-md-4">
           <div class="service-item">
-            <img class="nn-img" src="assets/images/n7.jpg" alt="">
+            <video class="vid-player" width="320" height="240" controls>
+              <source src="assets/images/VID-20250422-WA0008.mp4" type="video/mp4">
+             
+              
+            </video>
              
           </div>
         </div>
@@ -298,19 +309,23 @@
          
         <div class="col-md-4">
           <div class="service-item">
-            <img class="nn-img" src="assets/images/n2.jpg" alt="">
+            <video class="vid-player" width="320" height="240" controls>
+              <source src="assets/images/VID-20250422-WA0010.mp4" type="video/mp4">
+             
+              
+            </video>
             
           </div>
         </div>
         <div class="col-md-4">
           <div class="service-item">
-            <img class="nn-img" src="assets/images/n3.jpg" alt="">
+            <img class="nn-img" src="assets/images/n22.jpg" alt="">
             
           </div>
         </div>
         <div class="col-md-4">
           <div class="service-item">
-            <img class="nn-img" src="assets/images/n1.jpg" alt="">
+            <img class="nn-img" src="assets/images/n27.jpg" alt="">
              
           </div>
         </div>
@@ -666,6 +681,94 @@
         }
     
       });
+
+
+      // Wait for the HTML document to be fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+
+  // --- Existing Read More Button Logic ---
+  const readMoreBtns = document.querySelectorAll('.read-more-btn');
+  if (readMoreBtns.length > 0) {
+    readMoreBtns.forEach(function(btn) {
+      const moreContent = btn.previousElementSibling;
+      if (moreContent && moreContent.classList.contains('more-content')) {
+        btn.addEventListener('click', function() {
+          if (moreContent.style.display === 'none' || moreContent.style.display === '') {
+            moreContent.style.display = 'block';
+            btn.textContent = 'Read Less';
+          } else {
+            moreContent.style.display = 'none';
+            btn.textContent = 'Read More';
+          }
+        });
+      } else {
+         console.warn("Could not find corresponding '.more-content' element for a button:", btn);
+      }
+    });
+  } else {
+    console.warn("No elements with class 'read-more-btn' found.");
+  }
+  // --- End of Existing Read More Logic ---
+
+
+  // --- NEW Pesapal Button Logic ---
+  const pesapalButtons = document.querySelectorAll('.pesapal-donate-button');
+
+  pesapalButtons.forEach(button => {
+    button.addEventListener('click', function(event) {
+      event.preventDefault(); // Prevent default link behavior
+
+      // Optional: Add loading state to the button
+      button.textContent = 'Processing...';
+      button.disabled = true; // Disable button to prevent multiple clicks
+
+      // *** STEP 1: Call your Backend ***
+      // This URL should point to an endpoint on YOUR server
+      // You might want to send data like amount, description if needed
+      const backendUrl = '/initiate-pesapal-payment'; // <<-- IMPORTANT: Replace with your actual backend endpoint
+
+      fetch(backendUrl, {
+        method: 'POST', // Or 'GET', depending on your backend setup
+        headers: {
+          'Content-Type': 'application/json',
+          // Add any other headers like CSRF tokens if needed
+        },
+        // body: JSON.stringify({ amount: 1000, currency: 'KES', description: 'Donation KDYFO' }) // Example data to send
+      })
+      .then(response => {
+        if (!response.ok) {
+          // Handle server errors (e.g., backend couldn't talk to Pesapal)
+          throw new Error(`Network response was not ok: ${response.statusText}`);
+        }
+        return response.json(); // Expecting JSON like { redirectUrl: '...' } from backend
+      })
+      .then(data => {
+        // *** STEP 3: Redirect to Pesapal ***
+        if (data && data.redirectUrl) {
+          window.location.href = data.redirectUrl; // Redirect the user
+        } else {
+          // Handle cases where the backend didn't return the expected URL
+          console.error('Error: Invalid response from backend.', data);
+          alert('Sorry, there was an error initiating the payment. Please try again later.');
+          // Reset button state
+          button.textContent = 'DONATE';
+          button.disabled = false;
+        }
+      })
+      .catch(error => {
+        // Handle network errors or errors thrown above
+        console.error('Error initiating Pesapal payment:', error);
+        alert('Sorry, there was an error initiating the payment. Please try again later.');
+        // Reset button state
+        button.textContent = 'DONATE';
+        button.disabled = false;
+      });
+    });
+  });
+  // --- End of NEW Pesapal Logic ---
+
+});
+
     </script>
     
 

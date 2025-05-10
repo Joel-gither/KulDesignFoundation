@@ -1196,10 +1196,14 @@ footer .contact-form button.filled-button:hover {
 	margin-bottom: -140px;
 	padding: 120px 0px;
 }
-
+ 
 .team-item img {
-	width: 100%;
+	width: 250px;
+	height: 250px;
 	overflow: hidden;
+	border-radius: 150px;
+	object-fit: cover;
+	margin: 0 auto;
 }
 
 .team-item .down-content {
@@ -1226,8 +1230,37 @@ footer .contact-form button.filled-button:hover {
 	margin-bottom: 20px;
 }
 
-
+.gallery h2{
+	font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: #3a32af;
+  font-weight: 600;
+}
  
+.gallery{
+	padding:3em 0;
+	
+}
+.event-sec ul li{
+	display:block;
+}
+.event-sec ul li a{
+	color: #333;
+	font-weight:500;
+	font-size:1.1em;
+	padding:3px 0;
+	display:block;
+}
+.event-pics a{
+	  width: 23.5%;
+  margin: 0 17px 22px 0;
+  float: left;
+  
+}
+.event-pics a img{
+	width:100%;	
+}
 
 .single-services {
 	margin-top: 140px;
@@ -1295,9 +1328,30 @@ footer .contact-form button.filled-button:hover {
   color: #7a7a7a;
   margin-bottom: 0px;
 }
-
-
-
+.container .event-pics{
+	display: flex;
+	flex-wrap: wrap;
+	gap: 1px;
+	justify-content: center;
+}
+.container .event-pics .fancybox{
+	height: 250px;
+	width: 350px;
+	border: 10px solid #FFF;
+	box-shadow: 0 5px 15px rgba(0,0,0,.2);
+	overflow: hidden;
+	
+}
+.container .event-pics .fancybox img{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	transition: .2s linear;
+	cursor: pointer;
+}
+.container .event-pics .fancybox img{
+	transform: scale(1.1);
+}
  
 .contact-information {
 	margin-top: 140px;

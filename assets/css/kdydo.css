@@ -733,7 +733,11 @@ ul.slick-dots {
 }
 
 
- 
+.nn-img{
+	height: 10rem;
+	width: 20rem;
+	
+}
 .about-testimonials {
 	margin-top: 0px!important;
 }
@@ -768,7 +772,8 @@ ul.slick-dots {
 	color: #1b1477;
 }
 .testimonial-item img {
-	max-width: 60px;
+	max-width: 150px;
+	height: 100%;
 	border-radius: 50%;
 	margin: 25px auto 0px auto;
 }
